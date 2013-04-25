@@ -13,7 +13,6 @@ describe('OptiPNG', function () {
 
 	it('should return path to OptiPNG binary', function (cb) {
 		var binPath = require('../lib/optipng-bin.js').path;
-		console.log("EXEC: " + '"binPath"' + ' -v -');
 		exec('"' + binPath + '" -v -', function (err, stdout, stderr) {
 			assert(stderr.toString().indexOf('OptiPNG') !== -1);
 			cb();
